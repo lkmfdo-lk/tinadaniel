@@ -429,18 +429,31 @@ footer p {
         font-size: 35vw;
     }
     .accent-text {
-        display: none; /* Hide floating accents on mobile to prevent clutter */
+        display: none;
     }
     .scroll-indicator {
         bottom: 1rem;
         right: 1.5rem;
     }
     .hero-image-wrapper {
-        margin-top: 15vh;
-        height: 80vh;
+        margin-top: 5vh; /* Reduced to remove blank space */
+        height: 75vh;
     }
     .about, .gallery, .contact {
-        padding: 5rem 1.5rem;
+        padding: 4rem 1.5rem;
+    }
+    .gallery-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .gallery-container {
+        grid-template-columns: 1fr; /* Stack images on mobile */
+        grid-auto-rows: 400px;
+    }
+    .gallery-item.tall, .gallery-item.wide {
+        grid-row: span 1;
+        grid-column: span 1;
     }
     .email-link {
         font-size: 2rem;
